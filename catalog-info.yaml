@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: duj1rf7ev-go-gitops
+  description: This is GitOps manifest for duj1rf7ev-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: duj1rf7ev-go
+    janus-idp.io/tekton: duj1rf7ev-go 
+    backstage.io/kubernetes-id: duj1rf7ev-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:duj1rf7ev-go
